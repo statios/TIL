@@ -49,11 +49,3 @@
 [Linked List (작성중)](Untitled%20372b327c14914c98a5c546cebcc3a5b4/Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242.md)
 
 ### Etc
-
----
-
-### TODO
-
-- study about 'defer'
-
-[파이어스토어 캐싱하기](Untitled%20372b327c14914c98a5c546cebcc3a5b4/Untitled%20755b189f23b74c15a36b355d127e8036.md)
