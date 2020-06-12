@@ -222,28 +222,91 @@ print(list) //동해물과 -> 백두산이 -> 마르고닳도록 -> 하느님이
 
 ---
 
-### Performance analysis
+### push, append, insert, node(at:) Performance
 
-1. `pop` - 첫번째 값 제거 
+![Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image%202.png](Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image%202.png)
 
-    ```jsx
-    extension LinkedList {
-      @discardableResult
-      public mutating func pop() -> Value? {
-        defer {
-          head = head?.next
-          if isEmpty {
-            tail = nil
-          }
-        }
-        return head?.value
+---
+
+### pop
+
+첫번째 값 제거 
+
+```jsx
+extension LinkedList {
+  @discardableResult
+  public mutating func pop() -> Value? {
+    defer {
+      head = head?.next
+      if isEmpty {
+        tail = nil
       }
     }
-    ```
+    return head?.value
+  }
+}
 
-    - 제거된 첫번째 값을 반환한다. 옵셔널인 이유는 list가 empty일 때 nil을 리턴하기 때문이다.
-    - head를 이전 head에 대치하여 첫 노드를 제거하는 방식
-    - ARC는 메서드가 종료되었을때 old node를 메모리에서 해제한다 = 레퍼런트 카운트가 0이 된다
-    - list가 empty면 tail을 제거해준다.
-2. `removeLast` - 마지막 값 제거
-3. `remove(at:)` - 특정 위치의 값 제거
+var list = LinkedList<Int>()
+list.push(3)
+list.push(2)
+list.push(1)
+list.pop()
+print(list) // 2 -> 3
+```
+
+- 제거된 첫번째 값을 반환한다. 옵셔널인 이유는 list가 empty일 때 nil을 리턴하기 때문이다.
+- head를 이전 head에 대치하여 첫 노드를 제거하는 방식
+- ARC는 메서드가 종료되었을때 old node를 메모리에서 해제한다 = 레퍼런트 카운트가 0이 된다
+- list가 empty면 tail을 제거해준다.
+
+---
+
+### remove last
+
+마지막 값 제거
+
+```jsx
+extension LinkedList {
+  @discardableResult
+  public mutating func removeLast() -> Value? {
+    //1
+    guard let head = head else { return nil }
+    //2
+    guard head.next != nil else { return pop() }
+    //3
+    var prev = head
+    var current = head
+    
+    while let next = current.next {
+      prev = current
+      current = next
+    }
+    //4
+    prev.next = nil
+    tail = prev
+    return current.value
+  }
+}
+```
+
+1. head가 없으면 empty list 이므로 nil을 반환하면서 메서드를 종료, head가 있으면 언래핑 참조 상수를 생성
+2. head.next가 nil이면 `pop` 메서드를 이용해서 첫번째 value를 제거하여 반환하고 종료.
+3. next value가 없을때까지 순회하여 prev가 마지막 value 한칸 앞을 참조, current가 마지막 value를 참조
+4. prev의 next value를 제거하고, prev를 tail로 대치한다. 그리고 제거하는 value인 current value를 반환하면서 메서드 종료
+
+```jsx
+var list = LinkedList<Int>()
+list.push(3)
+list.push(2)
+list.push(1)
+list.removeLast() // 3
+print(list) // 1 -> 2
+```
+
+---
+
+### remove(after:)
+
+특정 위치의 값 제거
+
+---
