@@ -10,7 +10,7 @@
     - 자체 value를 가짐
     - 다음 node를 참조함 - 다음 node의 참조값이 nil이면 해당 value는 end of list
 
-    ![Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image.png](Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image.png)
+    ![Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image.png](Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image.png)
 
 ---
 
@@ -50,7 +50,7 @@ print(node1) // 1 -> 2 -> 3
 
 ### LinkedList
 
-![Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image%201.png](Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image%201.png)
+![Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image%201.png](Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image%201.png)
 
 - linkedList 객체는 head와 tail을 가진다
 - head : 첫번째 노드
@@ -224,7 +224,7 @@ print(list) //동해물과 -> 백두산이 -> 마르고닳도록 -> 하느님이
 
 ### push, append, insert, node(at:) Performance
 
-![Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image%202.png](Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image%202.png)
+![Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image%202.png](Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image%202.png)
 
 ---
 
@@ -308,5 +308,42 @@ print(list) // 1 -> 2
 ### remove(after:)
 
 특정 위치의 값 제거
+
+1. 삭제하기를 원하는 노드의 직전 노드를 찾는다
+2. 해당 노드와 다음 노드의 연결을 제거한다
+
+![Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image%203.png](Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image%203.png)
+
+```jsx
+extension LinkedList {
+  @discardableResult
+  public mutating func remove(after node: Node<Value>) -> Value? {
+    defer {
+      if node.next === tail { // 제거하려는 노드가 tail인 경우
+        tail = node
+      }
+      node.next = node.next?.next
+    }
+    return node.next?.value
+  }
+}
+```
+
+제거하려는 노드가 tail 노드인 경우가 예외 케이스이다.
+
+tail reference의 업데이트가 필요하기 때문이다.
+
+```jsx
+var list = LinkedList<Int>()
+list.push(3)
+list.push(2)
+list.push(1)
+let index = 1
+let node = list.node(at: index - 1)!
+let removedValue = list.remove(after: node)
+print(list) // 1 -> 3
+```
+
+여기서 node(at:) 실행 이후에 remove(after:)는 O(1) 시간복잡도를 가진다
 
 ---
