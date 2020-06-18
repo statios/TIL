@@ -10,7 +10,7 @@
     - 자체 value를 가짐
     - 다음 node를 참조함 - 다음 node의 참조값이 nil이면 해당 value는 end of list
 
-    ![Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image.png](Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image.png)
+    ![Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image.png](Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image.png)
 
 ---
 
@@ -50,7 +50,7 @@ print(node1) // 1 -> 2 -> 3
 
 ### LinkedList
 
-![Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image%201.png](Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image%201.png)
+![Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image%201.png](Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image%201.png)
 
 - linkedList 객체는 head와 tail을 가진다
 - head : 첫번째 노드
@@ -224,7 +224,7 @@ print(list) //동해물과 -> 백두산이 -> 마르고닳도록 -> 하느님이
 
 ### push, append, insert, node(at:) Performance
 
-![Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image%202.png](Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image%202.png)
+![Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image%202.png](Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image%202.png)
 
 ---
 
@@ -312,7 +312,7 @@ print(list) // 1 -> 2
 1. 삭제하기를 원하는 노드의 직전 노드를 찾는다
 2. 해당 노드와 다음 노드의 연결을 제거한다
 
-![Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image%203.png](Linked%20List%202c9d5a2e79e349b49e4e6eb0c6fb002f/image%203.png)
+![Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image%203.png](Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image%203.png)
 
 ```jsx
 extension LinkedList {
@@ -347,3 +347,44 @@ print(list) // 1 -> 3
 여기서 node(at:) 실행 이후에 remove(after:)는 O(1) 시간복잡도를 가진다
 
 ---
+
+### pop, removeLast, remove(after:) performance
+
+![Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image%204.png](Linked%20List%20d63cb30a27cd453ca7ccf000e9b72242/image%204.png)
+
+---
+
+### Swift collection protocols
+
+Swift standard library는 특정 타입을 정의하기 위한 프로토콜이 정의되어있다.
+
+프로토콜은 채택되는 타입으로 하여금 어떤 특성과 성능을 보장하도록 한다.
+
+4개의 프로토콜로 이루어진 Collection Protocol Set 이 있다.
+
+1. `Sequence`
+
+    sequence를 채택한 타입은 순차적 접근을 제공한다. 주의할 점은, 순차적 접근을 사용하였을 때 element가 파괴적으로 소모될 수 있다는 것이다. <순회하는 도중에 element의 immutable이 보장되지 않는다는 말인것 같은데?>
+
+2. `Collection`
+
+    Collection을 채택한 타입은 기본적으로 sequence가 보장하는 특성에 더하여 추가적인  특성을 보장한다.
+
+    - 유한한 element
+    - 비파괴적인 순차 접근
+3. `BidrectionalCollection` <양방향 콜렉션>
+
+    시퀀스를 양방향으로 순회할 수 있다.
+
+    linked list는 단방향 흐름을 제공하기 때문에 linkedList에서는 채택하지 않는다
+
+4. `RandomAccessCollection`
+
+    BidrectionalCollection의 특성에 더하여 특정 index의 element에서 다른 index로 접근할 때 항상 동일한 시간이 걸리는 것이 보장되는 경우 RandomAccessCollection을 따른다고 한다.
+
+    LinkedList에서는 가까운 노드일 수록 접근 시간이 짧아지므로 RandomAccessCollection을 채택한 타입이 아니다.
+
+Linked list의 경우
+
+- sequence - 노드의 체인이므로
+- collection - 노드 체인은 유한한 시퀀스
