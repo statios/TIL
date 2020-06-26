@@ -8,6 +8,8 @@
 
 ### Swift
 
+[defer - 지연 블록](Untitled%20372b327c14914c98a5c546cebcc3a5b4/defer%2006f779e63efd41759ec98a5749c27553.md)
+
 [Extensions with a Generic Where Clause](Untitled%20372b327c14914c98a5c546cebcc3a5b4/Extensions%20with%20a%20Generic%20Where%20Clause%20442ae68e41bf443eba8eea986bacc95f.md)
 
 ### RxSwift
@@ -53,8 +55,6 @@
 ---
 
 ### TODO
-
-[what is defer](Untitled%20372b327c14914c98a5c546cebcc3a5b4/what%20is%20defer%209ee9f4b44c8448b8ad3f63caf4faeb82.md)
 
 [파이어스토어 캐싱하기](Untitled%20372b327c14914c98a5c546cebcc3a5b4/Untitled%20755b189f23b74c15a36b355d127e8036.md)
 
