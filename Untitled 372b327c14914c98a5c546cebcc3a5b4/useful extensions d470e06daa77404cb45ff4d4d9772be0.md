@@ -39,3 +39,43 @@ extension String {
   }
 }
 ```
+
+```jsx
+// Alert
+extension Reactive where Base: UIViewController {
+  func showAlert(
+    message: String,
+    title: String? = nil,
+    style: UIAlertController.Style = .alert)
+    -> Observable<Void> {
+      return Observable.create { emitter in
+        let alert = UIAlertController(
+          title: title,
+          message: message,
+          preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default) { _ in
+          emitter.onNext(())
+        }
+        alert.addAction(okAction)
+        self.base.present(alert, animated: true)
+        return Disposables.create()
+      }
+  }
+}
+
+extension UIViewController {
+  func showAlert(
+    message: String,
+    title: String? = nil,
+    style: UIAlertController.Style = .alert,
+    handler: ((UIAlertAction) -> Void)? = nil) {
+    let alert = UIAlertController(
+      title: title,
+      message: message,
+      preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "확인", style: .default, handler: handler)
+    alert.addAction(okAction)
+    self.present(alert, animated: true)
+  }
+}
+```
