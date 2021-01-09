@@ -1,87 +1,105 @@
-# 🧘‍♂️
+# TIL
 
 ### Xcode
 
-[Managing different Environments using XCode Build Schemes and Configurations](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Managing%20different%20Environments%20using%20XCode%20Build%20%20f3f1ad6ee1bd436391fc4d25629241b3.md)
+[Managing different Environments using XCode Build Schemes and Configurations](TIL%20372b327c14914c98a5c546cebcc3a5b4/Managing%20different%20Environments%20using%20XCode%20Build%20%20f3f1ad6ee1bd436391fc4d25629241b3.md)
 
-[Xcode Target, Project, Workspace, Scheme 그리고 Build Setting](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Xcode%20Target,%20Project,%20Workspace,%20Scheme%20%E1%84%80%E1%85%B3%E1%84%85%E1%85%B5%E1%84%80%E1%85%A9%20Bu%20d3ae4e7a73f447d5be0af5afebb4faa1.md)
+[Xcode Target, Project, Workspace, Scheme and Build Setting](TIL%20372b327c14914c98a5c546cebcc3a5b4/Xcode%20Target,%20Project,%20Workspace,%20Scheme%20and%20Build%20d3ae4e7a73f447d5be0af5afebb4faa1.md)
 
 ### iOS
 
-[Modular Architecture in iOS](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Modular%20Architecture%20in%20iOS%20d0022bbf10864c9fb8436aac630bdbc2.md)
+[UICollectionView Custom layout](TIL%20372b327c14914c98a5c546cebcc3a5b4/UICollectionView%20Custom%20layout%209b4f8bb3fb864b498e45df9afbc0a14c.md)
 
-[Private CocoaPods Library만들기](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Private%20CocoaPods%20Library%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5%2095a2a1f66fa24e478f41ab849c6bf6c7.md)
+[Modular Architecture in iOS](TIL%20372b327c14914c98a5c546cebcc3a5b4/Modular%20Architecture%20in%20iOS%20d0022bbf10864c9fb8436aac630bdbc2.md)
 
-[Custom Framework만들고 추가하는 법](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Custom%20Framework%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%A9%20%E1%84%8E%E1%85%AE%E1%84%80%E1%85%A1%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%87%E1%85%A5%E1%86%B8%20a969c6277cc64deb9dbbdf1b4c575b63.md)
+[Create a Private CocoaPods Library](TIL%20372b327c14914c98a5c546cebcc3a5b4/Create%20a%20Private%20CocoaPods%20Library%2095a2a1f66fa24e478f41ab849c6bf6c7.md)
 
-[useful extensions](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/useful%20extensions%20d470e06daa77404cb45ff4d4d9772be0.md)
+[Create a Custom Framework](TIL%20372b327c14914c98a5c546cebcc3a5b4/Create%20a%20Custom%20Framework%20a969c6277cc64deb9dbbdf1b4c575b63.md)
 
-[Moya+RxSwift networking](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Moya+RxSwift%20networking%20e8baa9e101fe45109c5b4e1eed969a5c.md)
+[useful extensions](TIL%20372b327c14914c98a5c546cebcc3a5b4/useful%20extensions%20d470e06daa77404cb45ff4d4d9772be0.md)
 
-[setNeedsLayout vs layoutIfNeeded](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/setNeedsLayout%20vs%20layoutIfNeeded%208b107e551479412db605cbf225e1fc3b.md)
+[Moya+RxSwift networking](TIL%20372b327c14914c98a5c546cebcc3a5b4/Moya+RxSwift%20networking%20e8baa9e101fe45109c5b4e1eed969a5c.md)
 
-[애플 아이디로 로그인](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/%E1%84%8B%E1%85%A2%E1%84%91%E1%85%B3%E1%86%AF%20%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B5%E1%84%85%E1%85%A9%20%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%8B%E1%85%B5%E1%86%AB%20ae5acc48c1774d508e7377d2b0fa1dc8.md)
+[setNeedsLayout vs layoutIfNeeded](TIL%20372b327c14914c98a5c546cebcc3a5b4/setNeedsLayout%20vs%20layoutIfNeeded%208b107e551479412db605cbf225e1fc3b.md)
+
+[Sign in with APPLE](TIL%20372b327c14914c98a5c546cebcc3a5b4/Sign%20in%20with%20APPLE%20ae5acc48c1774d508e7377d2b0fa1dc8.md)
+
+[ios audio programming mechanism](TIL%20372b327c14914c98a5c546cebcc3a5b4/ios%20audio%20programming%20mechanism%203795cb609822431e8a6c52d59ec07823.md)
 
 ### Swift
 
-[defer - 지연 블록](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/defer%20-%20%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%A7%E1%86%AB%20%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%86%A8%2006f779e63efd41759ec98a5749c27553.md)
+[mordern DI - resolver](TIL%20372b327c14914c98a5c546cebcc3a5b4/mordern%20DI%20-%20resolver%209d7a601b66f84b889821dd157525a893.md)
 
-[Extensions with a Generic Where Clause](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Extensions%20with%20a%20Generic%20Where%20Clause%20442ae68e41bf443eba8eea986bacc95f.md)
+[DI by Property Wrappers](TIL%20372b327c14914c98a5c546cebcc3a5b4/DI%20by%20Property%20Wrappers%206f55739aebc04669b8b940570080771d.md)
+
+[defer](TIL%20372b327c14914c98a5c546cebcc3a5b4/defer%2006f779e63efd41759ec98a5749c27553.md)
+
+[Extensions with a Generic Where Clause](TIL%20372b327c14914c98a5c546cebcc3a5b4/Extensions%20with%20a%20Generic%20Where%20Clause%20442ae68e41bf443eba8eea986bacc95f.md)
+
+### Swift UI
+
+[State and Data Flow](TIL%20372b327c14914c98a5c546cebcc3a5b4/State%20and%20Data%20Flow%20af5ffb129e5049f389ea5eee86283917.md)
 
 ### Swift - data structures & algorithms
 
-[스위프트 기본 데이터 구조](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/%E1%84%89%E1%85%B3%E1%84%8B%E1%85%B1%E1%84%91%E1%85%B3%E1%84%90%E1%85%B3%20%E1%84%80%E1%85%B5%E1%84%87%E1%85%A9%E1%86%AB%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%2059dc93768e1e45d0939a82cd1a942153.md)
+[basic  swift data structure](TIL%20372b327c14914c98a5c546cebcc3a5b4/basic%20swift%20data%20structure%2059dc93768e1e45d0939a82cd1a942153.md)
 
-[스위프트 고급 데이터 구조](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/%E1%84%89%E1%85%B3%E1%84%8B%E1%85%B1%E1%84%91%E1%85%B3%E1%84%90%E1%85%B3%20%E1%84%80%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B8%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%204d6c3dbb4e744cbd840420428d8ff20e.md)
+[advanced  swift data structure](TIL%20372b327c14914c98a5c546cebcc3a5b4/advanced%20swift%20data%20structure%204d6c3dbb4e744cbd840420428d8ff20e.md)
 
 ### RxSwift
 
-[RxSwift 기초](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/RxSwift%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%207670be5483634a63b206c162ef671a39.md)
+[RxSwift basic](TIL%20372b327c14914c98a5c546cebcc3a5b4/RxSwift%20basic%207670be5483634a63b206c162ef671a39.md)
 
-[Observables](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Observables%208d2a491ebe5e4cf79722909c853e6426.md)
+[Observables](TIL%20372b327c14914c98a5c546cebcc3a5b4/Observables%208d2a491ebe5e4cf79722909c853e6426.md)
 
-[Subject](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Subject%200c08940abdfb44c68ee82ca71d39c4a2.md)
+[Subject](TIL%20372b327c14914c98a5c546cebcc3a5b4/Subject%200c08940abdfb44c68ee82ca71d39c4a2.md)
 
-[Filtering Operators](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Filtering%20Operators%204f8ebc67d7ad4950b410e91af1bd0632.md)
+[Filtering Operators](TIL%20372b327c14914c98a5c546cebcc3a5b4/Filtering%20Operators%204f8ebc67d7ad4950b410e91af1bd0632.md)
 
-[Transforming operators](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Transforming%20operators%200c8afeaba2e94970a936e13e2e28f3bf.md)
+[Transforming operators](TIL%20372b327c14914c98a5c546cebcc3a5b4/Transforming%20operators%200c8afeaba2e94970a936e13e2e28f3bf.md)
 
-[Combining Operators](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Combining%20Operators%203761bfb53a3d4d3aaf8da3d2d070488b.md)
+[Combining Operators](TIL%20372b327c14914c98a5c546cebcc3a5b4/Combining%20Operators%203761bfb53a3d4d3aaf8da3d2d070488b.md)
 
-[Time Based Opertors](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Time%20Based%20Opertors%20db79f639fb8e4d51856db9ff7d03bf68.md)
+[Time Based Opertors](TIL%20372b327c14914c98a5c546cebcc3a5b4/Time%20Based%20Opertors%20db79f639fb8e4d51856db9ff7d03bf68.md)
 
-[RxSwift 로 UIKit 애니메이션 체이닝하기](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/RxSwift%20%E1%84%85%E1%85%A9%20UIKit%20%E1%84%8B%E1%85%A2%E1%84%82%E1%85%B5%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB%20%E1%84%8E%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%82%E1%85%B5%E1%86%BC%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%203ffa5dae96a84976b6ce7f6271bb6a68.md)
+[UIKit animation with RxSwift](TIL%20372b327c14914c98a5c546cebcc3a5b4/UIKit%20animation%20with%20RxSwift%203ffa5dae96a84976b6ce7f6271bb6a68.md)
 
-[RxDataSources](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/RxDataSources%200fe819261a944b8d9ad1b61c41421b05.md)
+[RxDataSources](TIL%20372b327c14914c98a5c546cebcc3a5b4/RxDataSources%200fe819261a944b8d9ad1b61c41421b05.md)
 
-[RxCocoa binding](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/RxCocoa%20binding%20515990a92b4641249e16573eb62a9a08.md)
+[RxCocoa binding](TIL%20372b327c14914c98a5c546cebcc3a5b4/RxCocoa%20binding%20515990a92b4641249e16573eb62a9a08.md)
 
-[FlatMap](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/FlatMap%20bd25c9f1ab324c2a9380f4bd9c1cddb6.md)
+[FlatMap](TIL%20372b327c14914c98a5c546cebcc3a5b4/FlatMap%20bd25c9f1ab324c2a9380f4bd9c1cddb6.md)
 
-[여러 network 요청 결합하기 by RxSwift + Moya](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/%E1%84%8B%E1%85%A7%E1%84%85%E1%85%A5%20network%20%E1%84%8B%E1%85%AD%E1%84%8E%E1%85%A5%E1%86%BC%20%E1%84%80%E1%85%A7%E1%86%AF%E1%84%92%E1%85%A1%E1%86%B8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20by%20RxSwift%20+%20Moya%207d318a4409cc48ad8ae299bfd3b54320.md)
-
-[observable 과 driver](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/observable%20%E1%84%80%E1%85%AA%20driver%2000c80a7f8368423d9324186a3da23291.md)
+[observable and driver](TIL%20372b327c14914c98a5c546cebcc3a5b4/observable%20and%20driver%2000c80a7f8368423d9324186a3da23291.md)
 
 ### Design Pattern
 
-[Facade pattern](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Facade%20pattern%20b338339f26194bf682eace9ee549decc.md)
+[Facade pattern](TIL%20372b327c14914c98a5c546cebcc3a5b4/Facade%20pattern%20b338339f26194bf682eace9ee549decc.md)
 
 ### Architecture
 
-[mvvm 우아한형제들 띠잉](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/mvvm%20%E1%84%8B%E1%85%AE%E1%84%8B%E1%85%A1%E1%84%92%E1%85%A1%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%A6%E1%84%83%E1%85%B3%E1%86%AF%20%E1%84%84%E1%85%B5%E1%84%8B%E1%85%B5%E1%86%BC%20229ea7ff491c470e9d15be5cb509bc34.md)
+[Clean Swift iOS Architecture](TIL%20372b327c14914c98a5c546cebcc3a5b4/Clean%20Swift%20iOS%20Architecture%20efcd6bde224e4ea1bf98f18b7b51f163.md)
 
-[ReactorKit](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/ReactorKit%20a7b743e968cb4a3ca92c19dfab5587a7.md)
+[iOS Clean Architechture](TIL%20372b327c14914c98a5c546cebcc3a5b4/iOS%20Clean%20Architechture%203b1fd22790834113b32527b74af80984.md)
 
-[ribs](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/ribs%202aae224764304b93b0b7fcd2aa433864.md)
+[MVVM — thiiing](TIL%20372b327c14914c98a5c546cebcc3a5b4/MVVM%20%E2%80%94%20thiiing%20229ea7ff491c470e9d15be5cb509bc34.md)
+
+[ReactorKit](TIL%20372b327c14914c98a5c546cebcc3a5b4/ReactorKit%20a7b743e968cb4a3ca92c19dfab5587a7.md)
+
+[ribs](TIL%20372b327c14914c98a5c546cebcc3a5b4/ribs%202aae224764304b93b0b7fcd2aa433864.md)
+
+[Service-Oriented Architecture](TIL%20372b327c14914c98a5c546cebcc3a5b4/Service-Oriented%20Architecture%201be9d0d0ecf4452888c4c542bc13bc99.md)
 
 ### Firebase
 
-[Firestore cache? no cache?](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Firestore%20cache%20no%20cache%20755b189f23b74c15a36b355d127e8036.md)
+[Firestore cache? no cache?](TIL%20372b327c14914c98a5c546cebcc3a5b4/Firestore%20cache%20no%20cache%20755b189f23b74c15a36b355d127e8036.md)
 
 ### Video
 
-[Remote Monster Guide](%F0%9F%A7%98%E2%80%8D%E2%99%82%EF%B8%8F%20372b327c14914c98a5c546cebcc3a5b4/Remote%20Monster%20Guide%2008b0768f5406410cb9b6456325fe3111.md)
+[Remote Monster Guide](TIL%20372b327c14914c98a5c546cebcc3a5b4/Remote%20Monster%20Guide%2008b0768f5406410cb9b6456325fe3111.md)
 
 ### OOP
 
 ### TDD
+
+[Unit Test in Clean Swift](TIL%20372b327c14914c98a5c546cebcc3a5b4/Unit%20Test%20in%20Clean%20Swift%201ac225748f514b5e9b9d86431aa713fc.md)
