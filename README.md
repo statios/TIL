@@ -30,6 +30,8 @@
 
 ### Swift
 
+[Closure](TIL%20372b327c14914c98a5c546cebcc3a5b4/Closure%20e18aefe1162b4930b925f3d75ed8f5d8.md)
+
 [ARC](TIL%20372b327c14914c98a5c546cebcc3a5b4/ARC%20733e9383f5ae4932970547df84695477.md)
 
 [mordern DI - resolver](TIL%20372b327c14914c98a5c546cebcc3a5b4/mordern%20DI%20-%20resolver%209d7a601b66f84b889821dd157525a893.md)
