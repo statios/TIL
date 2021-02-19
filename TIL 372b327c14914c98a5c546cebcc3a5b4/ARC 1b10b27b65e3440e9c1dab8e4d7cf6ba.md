@@ -1,0 +1,425 @@
+# ARC
+
+Swift는 앱의 메모리 사용을 관리하고 추적하기 위해서 Automatic Reference Counting (ARC)을 사용합니다.
+
+대부분의 경우에는 ARC에 의해서 자동으로 메모리 관리가 되고 있으므로 따로 신경을 쓰지 않아도 됩니다.
+
+ARC는 생성된 클래스 인스턴스가 더이상 필요하지 않게되면 자동적으로 메모리에서 해제합니다.
+
+다만 ARC가 정상적으로 작동하기 위해서 개발자가 추가적으로 ARC에게 정보를 제공해야 하는 경우도 있습니다.
+
+Reference counting은 클래스 인스턴스에만 적용됩니다.
+
+구조체와 열거형은 참조 타입이 아닌 값 타입으로 참조로 저장 또는 전달되지 않습니다.
+
+## How ARC Works
+
+새로운 클래스 인스턴스가 생성될 때 ARC는 인스턴스 정보가 저장되는 메모리를 할당합니다.
+
+이 메모리에는 인스턴스의 타입에 대한 정보와 해당 인스턴스와 관련된 저장 프로퍼티 값이 저장됩니다.
+
+생성된 인스턴스가 더이상 필요하지 않게되었을 때 ARC는 메모리를 해제합니다.
+
+ARC가 인스턴스를 메모리에서 해제한 이후에는,
+
+인스턴스 프로퍼티에 접근하거나 인스턴스 메서드를 실행할 수 없습니다.
+
+만약 해당 인스턴스로 접근을 시도한다면 앱은 크래시가 나며 강제로 종료됩니다.
+
+인스턴스들이 계속해서 사용될 필요가 있을 때 메모리에서 해제되지 않도록 하기위해서,
+
+ARC는 몇개의 properties, constants 그리고 variables에서 해당 인스턴스를 참조하고 있는지를 추적하여,
+
+해당 인스턴스에 대한 하나 이상의 활성 참조가 존재한다면 deallocate하지 않습니다.
+
+이를 위해 클래스 인스턴스를 properties, constants 그리고 variables에 할당할 때,
+
+해당 인스턴스에 대한 강한 참조를 선언하면 됩니다.
+
+인스턴스를 강하게 붙잡고 있다는 의미에서 강한 참조라고 표현하며,
+
+강한 참조가 유지되고 있는 한 해당 인스턴스는 deallocate되지 않습니다.
+
+## ARC in Action
+
+ARC가 동작하는 것을 확인하기 위해서 아래 코드를 살펴보겠습니다.
+
+메모리 alloc dealloc 과정을 표현하기 위해서 gif로 만들어보았어요.
+
+![ARC%201b10b27b65e3440e9c1dab8e4d7cf6ba/ezgif.com-gif-maker.gif](ARC%201b10b27b65e3440e9c1dab8e4d7cf6ba/ezgif.com-gif-maker.gif)
+
+person 인스턴스를 참조하는 변수가 더이상 없어지면서 dealloc되는 모습을 확인할 수 있습니다.
+
+## Strong Reference Cycles Between Class Instance
+
+위의 예시에서 ARC가 Person 인스턴스의 레퍼런스 카운트를 추적하여,
+
+더이상 해당 인스턴스가 필요하지 않을 때 dealloc되는 것을 확인하였습니다.
+
+그런데 레퍼런스 카운트가 영원히 0이 되지 않는 경우도 있습니다.
+
+두 인스턴스가 서로를 강한 참조하는 경우입니다.
+
+이런 경우에 더이상 해당 인스턴스가 필요하지 않은 경우에도 메모리에서 해제되지 않게됩니다.
+
+이것을 강한 참조 순환 Strong Reference Cycle이라고 합니다.
+
+이런 문제를 해결하기 위해서 
+
+클래스 간의 관계를 강한 참조가 아닌 약한 참조 또는 미소유 참조로 선언하여 해결할 수 있습니다.
+
+먼저 강한 참조 순환 문제가 발생하는 상황을 알아보겠습니다.
+
+```swift
+class Person {
+  let name: String
+  var aprtment: Apartment?
+  init(name: String) {
+    self.name = name
+    print("\(name) is being initialized")
+  }
+  deinit {
+    print("\(name) is being deinitialized")
+  }
+}
+
+class Apartment {
+  let unit: String
+  var tenant: Person?
+  init(unit: String) {
+    self.unit = unit
+  }
+  deinit {
+    print("Apartment \(unit) is being deinit")
+  }
+}
+```
+
+![ARC%201b10b27b65e3440e9c1dab8e4d7cf6ba/ezgif.com-gif-maker%201.gif](ARC%201b10b27b65e3440e9c1dab8e4d7cf6ba/ezgif.com-gif-maker%201.gif)
+
+L33, L34에서 nil을 할당하여 더이상 Person, Apartment 인스턴스에 접근할 수 없게되었지만,
+
+서로가 강한 참조를 하고 있어 레퍼런트 카운트가 0이 되지 않아 영원히 dealloc되지 않는 시나리오입니다.
+
+## Resolving Strong Reference Cycles Between Class Instances
+
+스위프트에서는 강한 참조 순환문제를 해결하기 위해서 두가지 방법을 제공합니다.
+
+클래스 프로퍼티를 약한 참조 weak references 또는 미소유 참조 unowned references 하는 것입니다.
+
+약한 참조와 미소유 참조는 다른 인스턴스를 강하게 붙들고 있지 않으면서 참조하여,
+
+강한 참조 순환 문제를 해결할 수 있습니다.
+
+참조하는 다른 인스턴스의 수명이 더 짧을 때,
+
+즉 참조하는 인스턴스가 먼저 deallocate 될것으로 예상될 때 약한 참조를 사용합니다.
+
+반대로 참조하는 다른 인스턴스의 수명이 같거나 더 길 때, 미소유 참조를 사용합니다.
+
+### Weak References
+
+약한 참조는 인스턴스를 강하게 붙들고 있지 않는 참조입니다.
+
+그러므로 참조된 인스턴스를 ARC에 의해 메모리 해제될 수 있도록하여,
+
+강한 참조 순환이 발생하는 것을 예방해줍니다.
+
+property 또는 variable 앞에 `weak` 키워드를 추가하여 사용할 수 있습니다.
+
+ARC는 약한 참조로 선언된 변수에 nil을 할당하여 대상 인스턴스가 deallocated 될 수 있도록합니다.
+
+그러기 위해서 약한 참조는 런타임에 nil이 할당될 수 있어야 하기 때문에 상수가 아닌 변수로 선언하여야 하며,
+
+옵셔널타입으로 선언되어야 합니다.
+
+약한 참조는 옵셔널 타입이므로 다른 옵셔널 타입과 마찬가지로 널 체크를 할 수 있으며,
+
+더이상 존재하지 않는 인스턴스를 참조하는 해당 변수에 접근하더라도,
+
+앱이 크래시 나서 강제로 종료되지 않습니다.
+
+> ARC에 의해 nil이 할당되는 것은 프로퍼티 옵저버에 의해 관찰되지 않습니다.
+
+약한 참조를 사용한 예시를 살펴보겠습니다.
+
+```swift
+class Person {
+  let name: String
+  var aprtment: Apartment?
+  init(name: String) {
+    self.name = name
+    print("\(name) is being initialized")
+  }
+  deinit {
+    print("\(name) is being deinitialized")
+  }
+}
+
+class Apartment {
+  let unit: String
+  weak var tenant: Person?
+  init(unit: String) {
+    self.unit = unit
+  }
+  deinit {
+    print("Apartment \(unit) is being deinit")
+  }
+}
+```
+
+Apartment 클래스의 tenant 프로퍼티를 약한 참조로 선언하였습니다.
+
+그리고 아래 코드가 동작하는 과정을 그림으로 살펴보겠습니다.
+
+![ARC%201b10b27b65e3440e9c1dab8e4d7cf6ba/ezgif.com-gif-maker%202.gif](ARC%201b10b27b65e3440e9c1dab8e4d7cf6ba/ezgif.com-gif-maker%202.gif)
+
+L33에서 더이상 Person을 강한 참조하는 곳이 없어지고 Person이 deallocate됩니다.
+
+그러면서 Person을 약한 참조하던 Apartment tenant 변수에 nil을 할당합니다.
+
+### Unowned References
+
+약한 참조와 마찬가지로, 미소유 참조도 인스턴스를 강하게 붙들고 있지 않습니다.
+
+하지만 약한 참조와 달리, 참조하는 인스턴스가 더 오래 살아남거나 동시에 없어지는 경우에 사용합니다.
+
+위에서는 Person 인스턴스가 먼저 없어지고 tenant 변수에 nil이 할당되었는데요,
+
+이것은 참조하는 인스턴스의 생명주기가 더 짧다는 말이기도합니다. 그래서 약한 참조가 사용되었구요.
+
+미소유 참조도 마찬가지로 변수나 프로퍼티 앞에 `unowned` 키워드를 추가하여 사용합니다.
+
+약한 참조와 달리 미소유 참조는 참조하는 해당 인스턴스가 항상 존재할 것으로 예상됩니다.
+
+그렇기 때문에 미소유 참조는 옵셔널 타입이 아니며, ARC도 미소유 참조 값으로 nil을 할당하지 않아요.
+
+> 미소유 참조는 참조하는 인스턴스가 항상 존재한다는 것이 보장될 때 사용되어야 하며 
+메모리 해제된 참조에 접근하게 되면 런타임 에러가 발생합니다.
+
+예시 코드를 살펴보겠습니다.
+
+```swift
+class Customer {
+  let name: String
+  var card: CreditCard?
+  init(name: String) {
+    self.name = name
+  }
+  deinit { print("\(name) is being deinitialized") }
+}
+
+class CreditCard {
+  let number: UInt64
+  unowned let customer: Customer
+  init(number: UInt64, customer: Customer) {
+    self.number = number
+    self.customer = customer
+  }
+  deinit { print("deinit credit card") }
+}
+```
+
+아래 미소유 참조에 의해서 인스턴스가 생성되고 소멸되는 과정을 알아보겠습니다.
+
+![ARC%201b10b27b65e3440e9c1dab8e4d7cf6ba/ezgif.com-gif-maker%203.gif](ARC%201b10b27b65e3440e9c1dab8e4d7cf6ba/ezgif.com-gif-maker%203.gif)
+
+L23에서 더이상 Customer를 강한 참조하는 곳이 없어지면서,
+
+Customer 인스턴스가 제거되고 동시에 Customer 인스턴스를 미소유 참조 하고 있는
+
+CreditCard 인스턴스도 제거되는 모습입니다.
+
+## Strong Reference Cycles for Closures
+
+위에서 두 인스턴스 프로퍼티가 서로를 강한 참조할 때 강한 참조 순환이 발생한다고 했습니다.
+
+그리고 약한 참조와 미소유 참조를 통해서 강한 참조 순환 문제를 해결하는 방법을 알아보았습니다.
+
+인스턴스의 프로퍼티에 클로져를 할당하고,
+
+그 클로져의 body가 인스턴스를 캡쳐하는 경우에도 강한 참조 순환이 발생합니다.
+
+이러한 캡쳐는 클로저 내부에서 인스턴스 프로퍼티에 접근하거나 인스턴스 메서드를 호출하였을 때 발생합니다.
+
+```swift
+lazy var someClousure = {
+	print(self.someProperty)
+	self.someMethod()
+}
+```
+
+두 경우 모두 클로져가 self를 캡처링 하게되어 강한 참조 순환을 만들게 됩니다.
+
+이러한 강한 참조 순환은 클로져가 클래스와 마찬가지로 참조 타입이기 때문에 발생합니다.
+
+스위프트는 이러한 문제를 해결하기 위해서 closure capture list를 제공합니다.
+
+그러면 먼저 인스턴스와 클로져 간의 강한 참조 순환 문제가 발생하는 경우를 살펴보겠습니다.
+
+```swift
+class HTMLElement {
+  
+  let name: String
+  let text: String?
+  
+  lazy var asHTML: () -> String = {
+    if let text = self.text {
+      return "<\(self.name)>\(text)</\(self.name)>"
+    } else {
+      return "<\(self.name) />"
+    }
+  }
+  
+  init(name: String, text: String? = nil) {
+    self.name = name
+    self.text = text
+  }
+  
+  deinit {
+    print("\(name) is being deinitialized")
+  }
+  
+}
+```
+
+1. name — "h1", "p", "br" 처럼 html element의 이름을 나타냅니다
+2. text — html element 안에 포함되는 텍스트를 나타냅니다.
+3. asHTML — name과 text를 결합하여 HTML string을 리턴하는 클로져입니다. 인스턴스 메소드처럼 사용되지만 클로져를 재할당하여 커스텀하여 사용할 수도 있습니다. 예를들면 아래와 같습니다.
+
+    ```swift
+    let heading = HTMLElement(name: "h1")
+    let defaultText = "some default text"
+    heading.asHTML = {
+      return "<\(heading.name)>\(heading.text ?? defaultText)</\(heading.name)>"
+    }
+
+    print(heading.asHTML()) //<h1>some default text</h1>
+    ```
+
+아래의 HTMLElemet 인스턴스를 생성하고 asHTML 클로져를 호출하여 프린트하는 예시를 살펴보겠습니다.
+
+```swift
+var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
+
+print(paragraph?.asHTML()) //Optional("<p>hello, world</p>")
+```
+
+asHTML() 클로져를 호출하는 순간,
+
+HTMLElement 인스턴스와 asHTML 클로져 같의 강한 참조 순환이 발생하였습니다.
+
+참조 관계를 다이어그램으로 표현하면 아래와 같습니다.
+
+![ARC%201b10b27b65e3440e9c1dab8e4d7cf6ba/image.png](ARC%201b10b27b65e3440e9c1dab8e4d7cf6ba/image.png)
+
+asHTML 프로퍼티는 클로져를 강한 참조합니다.
+
+클로저는 내부에서 self를 참조하여 캡쳐하고 인스턴스를 강한 참조합니다.
+
+이렇게 강한 참조 순환이 발생하게 됩니다.
+
+이제 paragraph라는 인스턴스는 더이상 필요하지 않게되어 nil을 할당한다고 해봅시다.
+
+```swift
+paragraph = nil
+```
+
+그런데도 HTMLElement 인스턴스의 deinit은 호출되지 않았습니다.
+
+인스턴스 내부에서 closure < - > instance 간의 강한 순환 참조가 존재하기 때문입니다.
+
+이제 해당 인스턴스를 메모리 해제할 방법이 존재하지 않게되었습니다.
+
+어떻게 해결할 수 있을까요?
+
+## Resolving Strong Reference Cycles for Closures
+
+capture list를 클로져 정의의 일부분으로 선언하여 해결합니다.
+
+capture list는 클로져 내부에서 캡쳐할 때 사용할 규칙을 정의합니다.
+
+두 인스턴스간의 강한 순환 참조 문제를 해결할 때 처럼, 
+
+캡쳐된 레퍼런스를 강한 참조가 아닌 약한 참조 또는 미소유 참조로 선언하여 해결할 수 있습니다.
+
+weak 또는 unowned 중 어떤것을 사용할지는 코드에 따라 다릅니다.
+
+### Defining a Capture List
+
+클로져의 파라미터와 리턴타입이 존재하는 경우
+
+```swift
+lazy var someClosure = { 
+  [unowned self, weak delegate = self.delegate]
+  (index: Int, stringToProcess: String) -> String in
+  // closure body
+}
+```
+
+클로져의 파라미터와 리턴타입이 존재하지 않는 경우
+
+```swift
+lazy var someClosure = {
+  [unowned self, weak delegate = self.delegate] in
+  // closure body goes here
+}
+```
+
+### Weak and Unowned References
+
+Unowned — 클로져와 캡처한 인스턴스가 항상 서로를 참조하고 항상 동시에 deallocated 되는 경우
+
+Weak — 캡처한 참조가 이후 어느 시점에 nil이 될 수 있는 경우. 이 경우 항상 옵셔널 타입이며 참조하는 인스턴스가 deallocate 되면 자동으로 nil이 됩니다. 물론 클로져 내부에서 해당 참조가 nil인지 체크할 수 있습니다.
+
+> 캡처된 참조가 절대로 nil이 될 일이 없을때는 weak이 아니라 unowned 참조합니다.
+
+위의 HTMLElement 클래스를 강한 참조 순환 문제를 해결하여 다시 작성해보겠습니다.
+
+```swift
+class HTMLElement {
+  
+  let name: String
+  let text: String?
+  
+  lazy var asHTML: () -> String = {
+    [unowned self] in
+    if let text = self.text {
+      return "<\(self.name)>\(text)</\(self.name)>"
+    } else {
+      return "<\(self.name) />"
+    }
+  }
+  
+  init(name: String, text: String? = nil) {
+    self.name = name
+    self.text = text
+  }
+  
+  deinit {
+    print("\(name) is being deinitialized")
+  }
+  
+}
+```
+
+이번에는 클로져 내부에서 [unowned self] 로 캡처 리스트를 작성하였습니다.
+
+```swift
+var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
+print(paragraph!.asHTML())
+// Prints "<p>hello, world</p>"
+```
+
+위의 코드를 실행하였을 때 참조 관계는 다음과 같습니다.
+
+![ARC%201b10b27b65e3440e9c1dab8e4d7cf6ba/image%201.png](ARC%201b10b27b65e3440e9c1dab8e4d7cf6ba/image%201.png)
+
+이제 서로가 서로를 강하게 참조하는 문제가 해결되었습니다.
+
+따라서 paragraph에 nil을 할당하면 HTMLElement 인스턴스가 메모리 해제될 것입니다.
+
+```swift
+paragraph = nil
+// Prints "p is being deinitialized"
+```
