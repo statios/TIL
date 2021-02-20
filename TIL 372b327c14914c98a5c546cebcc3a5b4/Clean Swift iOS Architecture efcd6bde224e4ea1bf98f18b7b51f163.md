@@ -43,5 +43,3 @@
         → 전달받은 response를 가공(format)한다.
 
         → ViewModel로 가공된 객체를 ViewController에 전달한다.
-
-## ViewController
