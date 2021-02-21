@@ -16,12 +16,14 @@ UIViewController 클래스에는
 
 UI, event handling, transition을 위한 다양한 메서드와 프로퍼티가 정의되어 있습니다.
 
-UIViewController를 subclass하여 앱 동작을 위해 필요한 커스텀 코드를 추가할 수 있습니다.
+또한 UIViewController를 subclass하여 앱 동작을 위해 필요한 커스텀 코드를 추가할 수 있습니다.
 
-두가지 타입의 ViewController가 있습니다.
+크게 두가지 타입의 ViewController가 있습니다.
 
-- 개발자가 작성하는 ViewController의 주 형태로, 앱의 컨텐츠로써 일부분을 관리하는 ViewController
-- Container View Controller는 다른 ViewController(child)에서 정보를 수집하여 navigate를 용이하게 하거나 ViewController의 content를 다르게 표시하는 방식을 제공합니다.
+- Content를 나타내는 ViewController
+- Content ViewController를 포함하는 Container ViewController
+
+    Ex. UINavigationController, UITabBarController
 
 대부분의 앱은 두 형태의 ViewContoroller 조합하여 구현합니다.
 
@@ -83,11 +85,11 @@ document에서는 true data를 유지합니다.
 
 ViewController는 responder 객체이며 responder chain으로 내려오는 이벤트를 처리할 수 있습니다.
 
-하지만 ViewController가 직접 터치 이벤트를 처리하는 경우는 거의 없습니다.
+하지만 ViewController에 직접적으로 수신되는 이벤트를 처리하는 경우는 거의 없습니다.
 
-일반적으로 Views가 자체 터치 이벤트를 처리하고 
+일반적으로는 Views에서 발생하는이벤트를
 
-결과를 관련 delegate 또는 target object(주로 ViewController)의 메서드로 결과를 전달합니다.
+관련 delegate 또는 target object(주로 ViewController)의 메서드로 결과를 전달합니다.
 
 그래서 보통 ViewController의 event는 delegate나 action methods를 사용하여 처리됩니다.
 
@@ -125,4 +127,28 @@ ViewController에서 environment(다양한 기기환경을 말하는듯)에 맞�
 
 같은 ViewController를 사용하면서 사이즈에 따라 적응할 수 있도록 해야합니다.
 
-iOS에서 ViewController는
+ViewController는 coarse-grained changes와 fine-grained changes를 핸들링 해주어야 합니다.
+
+Coarse-grained changes는 ViewController 디스플레이 크기와 같은 전체적인 특성(traits)이 변할때 발생합니다.
+
+가장 중요한 특성(traits)은 ViewController의 가로와 세로 사이즈 classes입니다.
+
+그 classes는 주어진 방향에서 ViewController가 공간을 얼만큼 차지하는지를 나타냅니다.
+
+사이즈 클래스를 사용해서 view의 레이아웃을 변경해줄 수 있습니다.
+
+horizontal size class가 regular일 때 ViewController는 추가적인 가로 공간을 활용하여 콘텐츠를 정렬할 수 있습니다.
+
+또는 horizontal size class가 compact일 때 ViewController는 콘텐츠를 세로로 정렬할 수 있습니다.
+
+![The%20Role%20of%20View%20Controllers%20920c6b3b6ed84a269f1ab0edcc99bd2f/image%203.png](The%20Role%20of%20View%20Controllers%20920c6b3b6ed84a269f1ab0edcc99bd2f/image%203.png)
+
+지정된 size class 내에서 more fine-grained size 변화는 얼마든지 발생할 수가 있어요.
+
+사용자가 화면 방향을 portrait에서 landscape로 바꾸는 경우에,
+
+size class는 변경되지 않지만 screen dimensions는 일반적으로 변경됩니다.
+
+Auto Layout을 사용한다면 UIKit은 새로운 dimensions에 맞춰서 크기와 위치를 자동적으로 조절합니다.
+
+물론 필요하다면 ViewController에서 추가적으로 조절하는 동작을 추가해 줄 수도 있습니다.
