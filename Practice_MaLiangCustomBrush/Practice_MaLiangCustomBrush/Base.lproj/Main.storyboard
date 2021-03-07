@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Practice_MaLiangCustomBrush" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXn-yP-GM2" customClass="Canvas" customModule="MaLiang">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVg-2b-ucs">
+                                        <rect key="frame" x="189" y="64" width="36" height="30"/>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="tappedClearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQ4-BX-GEP"/>
+                                        </connections>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="81I-Ss-rx0">
+                                        <rect key="frame" x="72.5" y="126" width="269" height="32"/>
+                                        <segments>
+                                            <segment title="Watercolor"/>
+                                            <segment title="Oil painting"/>
+                                            <segment title="Marker"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="tappedBrushSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="G3K-8T-h2y"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="81I-Ss-rx0" firstAttribute="centerX" secondItem="GXn-yP-GM2" secondAttribute="centerX" id="Bng-jc-EkT"/>
+                                    <constraint firstItem="81I-Ss-rx0" firstAttribute="top" secondItem="cVg-2b-ucs" secondAttribute="bottom" constant="32" id="IaU-i8-HfC"/>
+                                    <constraint firstItem="cVg-2b-ucs" firstAttribute="top" secondItem="GXn-yP-GM2" secondAttribute="top" constant="64" id="mja-tF-Y8j"/>
+                                    <constraint firstItem="cVg-2b-ucs" firstAttribute="centerX" secondItem="GXn-yP-GM2" secondAttribute="centerX" id="uHd-XI-8a6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GXn-yP-GM2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2CO-xz-lye"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GXn-yP-GM2" secondAttribute="trailing" id="6HH-Aw-m6D"/>
+                            <constraint firstAttribute="bottom" secondItem="GXn-yP-GM2" secondAttribute="bottom" id="mbb-TW-Lyl"/>
+                            <constraint firstItem="GXn-yP-GM2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nkc-mg-goM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="canvas" destination="GXn-yP-GM2" id="xDp-IB-a1Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="126"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

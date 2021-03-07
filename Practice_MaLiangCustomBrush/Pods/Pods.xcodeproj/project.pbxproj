@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00D7EB3BBA0A8DDDE1DF85B51D7D85CF /* MLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70055FC4959F92F8C55FF2B888C80FD /* MLColor.swift */; };
+		00EC23F11FA8FF92BEFFE0AEA96251A0 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191D9544A3921D361C70AC7B716FBFD /* Document.swift */; };
+		05B4B2277CD347AD134E33E8735E24DA /* Pods-Practice_MaLiangCustomBrush-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9322195E49464DA8394CBD8DC0414CFE /* Pods-Practice_MaLiangCustomBrush-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D3713DF5DA9650962CFAA64CD894FA7 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF10C493486EAD817A21BCE6BCF69D /* Printer.swift */; };
+		2238619A7A900BCEA29F5174D21F981F /* SnapshotTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ADDCEF838DA04AA53014D19A887339 /* SnapshotTarget.swift */; };
+		26E0F1FD5B114C768839EAE1B685A92D /* Eraser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D190206585C6911389C807703B7384C /* Eraser.swift */; };
+		3565ED8ACA44CC014DB67CF58A8005D1 /* ScrollableCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF094A1DC5E93C8E03F812946F2DF7 /* ScrollableCanvas.swift */; };
+		364FEAA8C5DEAB6B1BCE747EE269A264 /* MaLiang-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E21C185A930B6ACB94014CAF980C58 /* MaLiang-dummy.m */; };
+		376726ADC9F7272BC073C8C7FE6DD7B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		41971F376EE4D15A59F4DFE1121DEDAD /* WeakObjectBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B85BDB7586E1132A51156A2C3F9B10 /* WeakObjectBox.swift */; };
+		44E2B8910EE915CDBACB69B667976CDE /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4277299A058D0B1809B7D07D15FCDD4 /* Canvas.swift */; };
+		4703AFD93634D0F9325B5161807EAB53 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCA284ED7D3D59495DCA5F7BFD8AC0 /* Renderer.swift */; };
+		488C83F696DCB2B53DAA8E089F2CE3F3 /* Brush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676BB0737B554CD7EC940D94E9407438 /* Brush.swift */; };
+		48A85557D2CEDB01F8D8D936864B5AE5 /* DataObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9575B8E0997D902413456E3038AFF4 /* DataObserver.swift */; };
+		4C47AFC9E14B9185B7E8EC56F6EC6300 /* DataExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E0FB3E06943D415D1A9C70B3398A2 /* DataExporter.swift */; };
+		4FA29D75190CAB8405D943A1FED7E797 /* Pods-Practice_MaLiangCustomBrush-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 094878B70437B09CA22485291197EB5D /* Pods-Practice_MaLiangCustomBrush-dummy.m */; };
+		50C64451BBF036B182B1CE73DA4621F3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A716759D07259A1BB0C288DE219AFEA2 /* Utils.swift */; };
+		52E620A6B0484F1EE6B69FA8F42C8EF1 /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0D0FA08B9390653CE47D87D989633D /* Maths.swift */; };
+		57C5466EC10E545F556767605E41A3B2 /* MLLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3781C2BAB5E3E24D6A11230046FEB4C /* MLLine.swift */; };
+		654F6AF88E0DF7A357E135D2A4F6D09C /* MLTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7CF24FA26FAEEED5498FCDEF8B0110 /* MLTexture.swift */; };
+		6A0E6664132C3081174FA18034C54763 /* PaintingGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA81686DF2752017915E03AF2A7B6DC /* PaintingGestureRecognizer.swift */; };
+		74D7AEDE65B0B7775A6E9C45DF8DCEB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		78CDA2475C935894DFF4575768280CB4 /* ChartletBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218A44087B0653026A103EBD60A3BE5B /* ChartletBrush.swift */; };
+		8F1A2475F389FB00D2667AB925281CE8 /* ActionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E83D41C8811533CA4D726C96F3F670 /* ActionObserver.swift */; };
+		A372F5D335A7B7C444BA56139F26642B /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC925820424C0DB44A240E531AA03534 /* MetalView.swift */; };
+		B089AB21C324F14E2966F3E54D35FBB9 /* MaLiang-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F64B48F184A6249BD32E2603958EF4 /* MaLiang-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0B3F94E09E085D55BDADD13666E11EE /* GlowingBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F47E37CE352001B9462CF67845EE57 /* GlowingBrush.swift */; };
+		B64519BEC4C2F88C416D618E9C568E91 /* DataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6728AB6A1681258E21C9704AC00138 /* DataImporter.swift */; };
+		C280F0C1AFD354CF2AB3735E13525A28 /* RenderTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3083AA8A08298056554BFE355C69A5 /* RenderTarget.swift */; };
+		C77DC7561059A2DC59675D99FE72D6ED /* BezierGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A97AECDD63B4DA2EE7FC53CE95EB2 /* BezierGenerator.swift */; };
+		C89078F3AEFC541127F8BA3C15D522FB /* CanvasData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B1797DDBE67B938B665E4F1FEEF7C /* CanvasData.swift */; };
+		CDF9CD375FB6F53383F4758FEE6279CC /* LineStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7283D5308CB2B2DE3EA285995B8E723C /* LineStrip.swift */; };
+		E88AF7C12F05BAD688918F1B3ED2C8D9 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = C8D5AD306D328A3CF3C08843F30D8963 /* Shaders.metal */; };
+		E96E4191CEC15B1320FDB5097CBCD0A0 /* MLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCF7D8B765E62A09ABF9BD7A03D6A9F /* MLError.swift */; };
+		F4186999913573EB4AD74D3F579B48F6 /* ElementGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24612AA13DC5435690ED2127BE9EC2DC /* ElementGroup.swift */; };
+		F7248E072B527C1E815A54071CC5E88F /* Chartlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE49D7D61DBB0FB5789E0B7397E1DDE /* Chartlet.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E15AFA4AE6E751E5A6B5EBD5BB0EDD60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E631E27C5D04BC21AB3851D6CCE8E73E;
+			remoteInfo = MaLiang;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		094878B70437B09CA22485291197EB5D /* Pods-Practice_MaLiangCustomBrush-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Practice_MaLiangCustomBrush-dummy.m"; sourceTree = "<group>"; };
+		0D6728AB6A1681258E21C9704AC00138 /* DataImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataImporter.swift; path = "MaLiang/Classes/Data & Documents/DataImporter.swift"; sourceTree = "<group>"; };
+		1191D9544A3921D361C70AC7B716FBFD /* Document.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Document.swift; path = "MaLiang/Classes/Data & Documents/Document.swift"; sourceTree = "<group>"; };
+		15E21C185A930B6ACB94014CAF980C58 /* MaLiang-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MaLiang-dummy.m"; sourceTree = "<group>"; };
+		1F8675692CC5D4B870E1217CF104AF8F /* Pods-Practice_MaLiangCustomBrush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Practice_MaLiangCustomBrush.debug.xcconfig"; sourceTree = "<group>"; };
+		218A44087B0653026A103EBD60A3BE5B /* ChartletBrush.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartletBrush.swift; path = MaLiang/Classes/Brush/ChartletBrush.swift; sourceTree = "<group>"; };
+		24612AA13DC5435690ED2127BE9EC2DC /* ElementGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ElementGroup.swift; path = MaLiang/Classes/Elements/ElementGroup.swift; sourceTree = "<group>"; };
+		2C2A5ECF3A3C1FF4C583B31A79ACE2BC /* MaLiang.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MaLiang.modulemap; sourceTree = "<group>"; };
+		30FD56C8BF6EA943346689EEB6C2294D /* Pods-Practice_MaLiangCustomBrush-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Practice_MaLiangCustomBrush-acknowledgements.plist"; sourceTree = "<group>"; };
+		34E83D41C8811533CA4D726C96F3F670 /* ActionObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionObserver.swift; path = MaLiang/Classes/Canvas/ActionObserver.swift; sourceTree = "<group>"; };
+		37F64B48F184A6249BD32E2603958EF4 /* MaLiang-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MaLiang-umbrella.h"; sourceTree = "<group>"; };
+		44B85BDB7586E1132A51156A2C3F9B10 /* WeakObjectBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeakObjectBox.swift; path = "MaLiang/Classes/Math & Utils/WeakObjectBox.swift"; sourceTree = "<group>"; };
+		4D7B1797DDBE67B938B665E4F1FEEF7C /* CanvasData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CanvasData.swift; path = "MaLiang/Classes/Data & Documents/CanvasData.swift"; sourceTree = "<group>"; };
+		52DF10C493486EAD817A21BCE6BCF69D /* Printer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Printer.swift; path = MaLiang/Classes/Brush/Printer.swift; sourceTree = "<group>"; };
+		560A97AECDD63B4DA2EE7FC53CE95EB2 /* BezierGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BezierGenerator.swift; path = "MaLiang/Classes/Math & Utils/BezierGenerator.swift"; sourceTree = "<group>"; };
+		5D190206585C6911389C807703B7384C /* Eraser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Eraser.swift; path = MaLiang/Classes/Brush/Eraser.swift; sourceTree = "<group>"; };
+		676BB0737B554CD7EC940D94E9407438 /* Brush.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Brush.swift; path = MaLiang/Classes/Brush/Brush.swift; sourceTree = "<group>"; };
+		71BBB3B13373344E3B4FF2A4C7A073B6 /* MaLiang-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MaLiang-prefix.pch"; sourceTree = "<group>"; };
+		728166074C0E9AB3BA82EE0D172D13E4 /* MaLiang-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MaLiang-Info.plist"; sourceTree = "<group>"; };
+		7283D5308CB2B2DE3EA285995B8E723C /* LineStrip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineStrip.swift; path = MaLiang/Classes/Elements/LineStrip.swift; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		765F00D34D84F227AEBE40842F14B531 /* Pods-Practice_MaLiangCustomBrush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Practice_MaLiangCustomBrush.release.xcconfig"; sourceTree = "<group>"; };
+		76A672E53993C9EA73F6FA7F4C7839AD /* Pods-Practice_MaLiangCustomBrush-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Practice_MaLiangCustomBrush-frameworks.sh"; sourceTree = "<group>"; };
+		7C04451B584E627FEEB983BD91AC0747 /* Pods-Practice_MaLiangCustomBrush-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Practice_MaLiangCustomBrush-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7C76389560AFC013750B92D7C6788705 /* MaLiang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MaLiang.release.xcconfig; sourceTree = "<group>"; };
+		8E3083AA8A08298056554BFE355C69A5 /* RenderTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RenderTarget.swift; path = MaLiang/Classes/MetalBase/RenderTarget.swift; sourceTree = "<group>"; };
+		8FE49D7D61DBB0FB5789E0B7397E1DDE /* Chartlet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Chartlet.swift; path = MaLiang/Classes/Elements/Chartlet.swift; sourceTree = "<group>"; };
+		9322195E49464DA8394CBD8DC0414CFE /* Pods-Practice_MaLiangCustomBrush-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Practice_MaLiangCustomBrush-umbrella.h"; sourceTree = "<group>"; };
+		9A7CF24FA26FAEEED5498FCDEF8B0110 /* MLTexture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MLTexture.swift; path = MaLiang/Classes/MetalBase/MLTexture.swift; sourceTree = "<group>"; };
+		9AA81686DF2752017915E03AF2A7B6DC /* PaintingGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaintingGestureRecognizer.swift; path = "MaLiang/Classes/Math & Utils/PaintingGestureRecognizer.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FCF7D8B765E62A09ABF9BD7A03D6A9F /* MLError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MLError.swift; path = MaLiang/Classes/MetalBase/MLError.swift; sourceTree = "<group>"; };
+		A716759D07259A1BB0C288DE219AFEA2 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = "MaLiang/Classes/Math & Utils/Utils.swift"; sourceTree = "<group>"; };
+		AA74F5742B646E2D8FEB75C54F1F2362 /* MaLiang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MaLiang.framework; path = MaLiang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC9575B8E0997D902413456E3038AFF4 /* DataObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataObserver.swift; path = "MaLiang/Classes/Data & Documents/DataObserver.swift"; sourceTree = "<group>"; };
+		ADBF094A1DC5E93C8E03F812946F2DF7 /* ScrollableCanvas.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableCanvas.swift; path = MaLiang/Classes/Canvas/ScrollableCanvas.swift; sourceTree = "<group>"; };
+		AE6E0FB3E06943D415D1A9C70B3398A2 /* DataExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataExporter.swift; path = "MaLiang/Classes/Data & Documents/DataExporter.swift"; sourceTree = "<group>"; };
+		AF0D0FA08B9390653CE47D87D989633D /* Maths.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Maths.swift; path = "MaLiang/Classes/Math & Utils/Maths.swift"; sourceTree = "<group>"; };
+		B1F59C463944313F1588EEE0EC7C696A /* Pods-Practice_MaLiangCustomBrush-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Practice_MaLiangCustomBrush-Info.plist"; sourceTree = "<group>"; };
+		B3781C2BAB5E3E24D6A11230046FEB4C /* MLLine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MLLine.swift; path = MaLiang/Classes/Elements/MLLine.swift; sourceTree = "<group>"; };
+		C8D5AD306D328A3CF3C08843F30D8963 /* Shaders.metal */ = {isa = PBXFileReference; includeInIndex = 1; name = Shaders.metal; path = MaLiang/Classes/MetalBase/Shaders.metal; sourceTree = "<group>"; };
+		D4277299A058D0B1809B7D07D15FCDD4 /* Canvas.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Canvas.swift; path = MaLiang/Classes/Canvas/Canvas.swift; sourceTree = "<group>"; };
+		D4710069700F4A197D24F99B28E51838 /* Pods_Practice_MaLiangCustomBrush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Practice_MaLiangCustomBrush.framework; path = "Pods-Practice_MaLiangCustomBrush.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D70055FC4959F92F8C55FF2B888C80FD /* MLColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MLColor.swift; path = MaLiang/Classes/MetalBase/MLColor.swift; sourceTree = "<group>"; };
+		E4AE1567D3953AD29688A3F18C4C02C1 /* MaLiang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MaLiang.debug.xcconfig; sourceTree = "<group>"; };
+		EC925820424C0DB44A240E531AA03534 /* MetalView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetalView.swift; path = MaLiang/Classes/MetalBase/MetalView.swift; sourceTree = "<group>"; };
+		F0E3CE7231A0582756BE83F3A27F5BD3 /* Pods-Practice_MaLiangCustomBrush.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Practice_MaLiangCustomBrush.modulemap"; sourceTree = "<group>"; };
+		F1F47E37CE352001B9462CF67845EE57 /* GlowingBrush.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlowingBrush.swift; path = MaLiang/Classes/Brush/GlowingBrush.swift; sourceTree = "<group>"; };
+		F8ADDCEF838DA04AA53014D19A887339 /* SnapshotTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapshotTarget.swift; path = MaLiang/Classes/MetalBase/SnapshotTarget.swift; sourceTree = "<group>"; };
+		FDFCA284ED7D3D59495DCA5F7BFD8AC0 /* Renderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Renderer.swift; path = MaLiang/Classes/MetalBase/Renderer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C824DF07628B22765F43439210347DC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74D7AEDE65B0B7775A6E9C45DF8DCEB7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD558C6D5277C9F809BDA3280F22B266 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376726ADC9F7272BC073C8C7FE6DD7B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05F879BA2F6B3B2C1AA0FBEFE11C22DA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C2A5ECF3A3C1FF4C583B31A79ACE2BC /* MaLiang.modulemap */,
+				15E21C185A930B6ACB94014CAF980C58 /* MaLiang-dummy.m */,
+				728166074C0E9AB3BA82EE0D172D13E4 /* MaLiang-Info.plist */,
+				71BBB3B13373344E3B4FF2A4C7A073B6 /* MaLiang-prefix.pch */,
+				37F64B48F184A6249BD32E2603958EF4 /* MaLiang-umbrella.h */,
+				E4AE1567D3953AD29688A3F18C4C02C1 /* MaLiang.debug.xcconfig */,
+				7C76389560AFC013750B92D7C6788705 /* MaLiang.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MaLiang";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		64123C8D828191A9C912A3169D4E26C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B05D3C6B05B7E55D8271D2E714117D5E /* MaLiang */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		70B66E77238D40A4FB28E38B46BBBA21 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8EFCA773C313DF0A96F112E626FE1BA1 /* Pods-Practice_MaLiangCustomBrush */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		8EFCA773C313DF0A96F112E626FE1BA1 /* Pods-Practice_MaLiangCustomBrush */ = {
+			isa = PBXGroup;
+			children = (
+				F0E3CE7231A0582756BE83F3A27F5BD3 /* Pods-Practice_MaLiangCustomBrush.modulemap */,
+				7C04451B584E627FEEB983BD91AC0747 /* Pods-Practice_MaLiangCustomBrush-acknowledgements.markdown */,
+				30FD56C8BF6EA943346689EEB6C2294D /* Pods-Practice_MaLiangCustomBrush-acknowledgements.plist */,
+				094878B70437B09CA22485291197EB5D /* Pods-Practice_MaLiangCustomBrush-dummy.m */,
+				76A672E53993C9EA73F6FA7F4C7839AD /* Pods-Practice_MaLiangCustomBrush-frameworks.sh */,
+				B1F59C463944313F1588EEE0EC7C696A /* Pods-Practice_MaLiangCustomBrush-Info.plist */,
+				9322195E49464DA8394CBD8DC0414CFE /* Pods-Practice_MaLiangCustomBrush-umbrella.h */,
+				1F8675692CC5D4B870E1217CF104AF8F /* Pods-Practice_MaLiangCustomBrush.debug.xcconfig */,
+				765F00D34D84F227AEBE40842F14B531 /* Pods-Practice_MaLiangCustomBrush.release.xcconfig */,
+			);
+			name = "Pods-Practice_MaLiangCustomBrush";
+			path = "Target Support Files/Pods-Practice_MaLiangCustomBrush";
+			sourceTree = "<group>";
+		};
+		B05D3C6B05B7E55D8271D2E714117D5E /* MaLiang */ = {
+			isa = PBXGroup;
+			children = (
+				34E83D41C8811533CA4D726C96F3F670 /* ActionObserver.swift */,
+				560A97AECDD63B4DA2EE7FC53CE95EB2 /* BezierGenerator.swift */,
+				676BB0737B554CD7EC940D94E9407438 /* Brush.swift */,
+				D4277299A058D0B1809B7D07D15FCDD4 /* Canvas.swift */,
+				4D7B1797DDBE67B938B665E4F1FEEF7C /* CanvasData.swift */,
+				8FE49D7D61DBB0FB5789E0B7397E1DDE /* Chartlet.swift */,
+				218A44087B0653026A103EBD60A3BE5B /* ChartletBrush.swift */,
+				AE6E0FB3E06943D415D1A9C70B3398A2 /* DataExporter.swift */,
+				0D6728AB6A1681258E21C9704AC00138 /* DataImporter.swift */,
+				AC9575B8E0997D902413456E3038AFF4 /* DataObserver.swift */,
+				1191D9544A3921D361C70AC7B716FBFD /* Document.swift */,
+				24612AA13DC5435690ED2127BE9EC2DC /* ElementGroup.swift */,
+				5D190206585C6911389C807703B7384C /* Eraser.swift */,
+				F1F47E37CE352001B9462CF67845EE57 /* GlowingBrush.swift */,
+				7283D5308CB2B2DE3EA285995B8E723C /* LineStrip.swift */,
+				AF0D0FA08B9390653CE47D87D989633D /* Maths.swift */,
+				EC925820424C0DB44A240E531AA03534 /* MetalView.swift */,
+				D70055FC4959F92F8C55FF2B888C80FD /* MLColor.swift */,
+				9FCF7D8B765E62A09ABF9BD7A03D6A9F /* MLError.swift */,
+				B3781C2BAB5E3E24D6A11230046FEB4C /* MLLine.swift */,
+				9A7CF24FA26FAEEED5498FCDEF8B0110 /* MLTexture.swift */,
+				9AA81686DF2752017915E03AF2A7B6DC /* PaintingGestureRecognizer.swift */,
+				52DF10C493486EAD817A21BCE6BCF69D /* Printer.swift */,
+				FDFCA284ED7D3D59495DCA5F7BFD8AC0 /* Renderer.swift */,
+				8E3083AA8A08298056554BFE355C69A5 /* RenderTarget.swift */,
+				ADBF094A1DC5E93C8E03F812946F2DF7 /* ScrollableCanvas.swift */,
+				C8D5AD306D328A3CF3C08843F30D8963 /* Shaders.metal */,
+				F8ADDCEF838DA04AA53014D19A887339 /* SnapshotTarget.swift */,
+				A716759D07259A1BB0C288DE219AFEA2 /* Utils.swift */,
+				44B85BDB7586E1132A51156A2C3F9B10 /* WeakObjectBox.swift */,
+				05F879BA2F6B3B2C1AA0FBEFE11C22DA /* Support Files */,
+			);
+			name = MaLiang;
+			path = MaLiang;
+			sourceTree = "<group>";
+		};
+		C396BD5E2D59DEBD427D19296D3289CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA74F5742B646E2D8FEB75C54F1F2362 /* MaLiang.framework */,
+				D4710069700F4A197D24F99B28E51838 /* Pods_Practice_MaLiangCustomBrush.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				64123C8D828191A9C912A3169D4E26C4 /* Pods */,
+				C396BD5E2D59DEBD427D19296D3289CD /* Products */,
+				70B66E77238D40A4FB28E38B46BBBA21 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2A62B56B8EB7B357172D1DFC3C5322F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B089AB21C324F14E2966F3E54D35FBB9 /* MaLiang-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CFDE5801D64152D9BE7ACF38AA6C847 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05B4B2277CD347AD134E33E8735E24DA /* Pods-Practice_MaLiangCustomBrush-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D352259A2A1E6E3A44C98FE1A998B94 /* Pods-Practice_MaLiangCustomBrush */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C883FB4F3C2656FD78204F958FA1F00A /* Build configuration list for PBXNativeTarget "Pods-Practice_MaLiangCustomBrush" */;
+			buildPhases = (
+				8CFDE5801D64152D9BE7ACF38AA6C847 /* Headers */,
+				AF7467EB3059BFBC52AF7BF583B8FD09 /* Sources */,
+				DD558C6D5277C9F809BDA3280F22B266 /* Frameworks */,
+				80F0C034AABDF6F4ED3694F0D3983042 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5857D3C02D28597E7DC288E51D804ADE /* PBXTargetDependency */,
+			);
+			name = "Pods-Practice_MaLiangCustomBrush";
+			productName = "Pods-Practice_MaLiangCustomBrush";
+			productReference = D4710069700F4A197D24F99B28E51838 /* Pods_Practice_MaLiangCustomBrush.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E631E27C5D04BC21AB3851D6CCE8E73E /* MaLiang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF504CE61F3A9C4AE48FA877D51E66FB /* Build configuration list for PBXNativeTarget "MaLiang" */;
+			buildPhases = (
+				2A62B56B8EB7B357172D1DFC3C5322F8 /* Headers */,
+				043062115A8F31C50A7F7FDC468B1444 /* Sources */,
+				C824DF07628B22765F43439210347DC3 /* Frameworks */,
+				9B3AF9715ECA3602C9118EFAC7374756 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MaLiang;
+			productName = MaLiang;
+			productReference = AA74F5742B646E2D8FEB75C54F1F2362 /* MaLiang.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = C396BD5E2D59DEBD427D19296D3289CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E631E27C5D04BC21AB3851D6CCE8E73E /* MaLiang */,
+				8D352259A2A1E6E3A44C98FE1A998B94 /* Pods-Practice_MaLiangCustomBrush */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80F0C034AABDF6F4ED3694F0D3983042 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B3AF9715ECA3602C9118EFAC7374756 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		043062115A8F31C50A7F7FDC468B1444 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F1A2475F389FB00D2667AB925281CE8 /* ActionObserver.swift in Sources */,
+				C77DC7561059A2DC59675D99FE72D6ED /* BezierGenerator.swift in Sources */,
+				488C83F696DCB2B53DAA8E089F2CE3F3 /* Brush.swift in Sources */,
+				44E2B8910EE915CDBACB69B667976CDE /* Canvas.swift in Sources */,
+				C89078F3AEFC541127F8BA3C15D522FB /* CanvasData.swift in Sources */,
+				F7248E072B527C1E815A54071CC5E88F /* Chartlet.swift in Sources */,
+				78CDA2475C935894DFF4575768280CB4 /* ChartletBrush.swift in Sources */,
+				4C47AFC9E14B9185B7E8EC56F6EC6300 /* DataExporter.swift in Sources */,
+				B64519BEC4C2F88C416D618E9C568E91 /* DataImporter.swift in Sources */,
+				48A85557D2CEDB01F8D8D936864B5AE5 /* DataObserver.swift in Sources */,
+				00EC23F11FA8FF92BEFFE0AEA96251A0 /* Document.swift in Sources */,
+				F4186999913573EB4AD74D3F579B48F6 /* ElementGroup.swift in Sources */,
+				26E0F1FD5B114C768839EAE1B685A92D /* Eraser.swift in Sources */,
+				B0B3F94E09E085D55BDADD13666E11EE /* GlowingBrush.swift in Sources */,
+				CDF9CD375FB6F53383F4758FEE6279CC /* LineStrip.swift in Sources */,
+				364FEAA8C5DEAB6B1BCE747EE269A264 /* MaLiang-dummy.m in Sources */,
+				52E620A6B0484F1EE6B69FA8F42C8EF1 /* Maths.swift in Sources */,
+				A372F5D335A7B7C444BA56139F26642B /* MetalView.swift in Sources */,
+				00D7EB3BBA0A8DDDE1DF85B51D7D85CF /* MLColor.swift in Sources */,
+				E96E4191CEC15B1320FDB5097CBCD0A0 /* MLError.swift in Sources */,
+				57C5466EC10E545F556767605E41A3B2 /* MLLine.swift in Sources */,
+				654F6AF88E0DF7A357E135D2A4F6D09C /* MLTexture.swift in Sources */,
+				6A0E6664132C3081174FA18034C54763 /* PaintingGestureRecognizer.swift in Sources */,
+				0D3713DF5DA9650962CFAA64CD894FA7 /* Printer.swift in Sources */,
+				4703AFD93634D0F9325B5161807EAB53 /* Renderer.swift in Sources */,
+				C280F0C1AFD354CF2AB3735E13525A28 /* RenderTarget.swift in Sources */,
+				3565ED8ACA44CC014DB67CF58A8005D1 /* ScrollableCanvas.swift in Sources */,
+				E88AF7C12F05BAD688918F1B3ED2C8D9 /* Shaders.metal in Sources */,
+				2238619A7A900BCEA29F5174D21F981F /* SnapshotTarget.swift in Sources */,
+				50C64451BBF036B182B1CE73DA4621F3 /* Utils.swift in Sources */,
+				41971F376EE4D15A59F4DFE1121DEDAD /* WeakObjectBox.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF7467EB3059BFBC52AF7BF583B8FD09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FA29D75190CAB8405D943A1FED7E797 /* Pods-Practice_MaLiangCustomBrush-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5857D3C02D28597E7DC288E51D804ADE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MaLiang;
+			target = E631E27C5D04BC21AB3851D6CCE8E73E /* MaLiang */;
+			targetProxy = E15AFA4AE6E751E5A6B5EBD5BB0EDD60 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3DF80FFE67222084B7DCD07C0BC6EE98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C76389560AFC013750B92D7C6788705 /* MaLiang.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MaLiang/MaLiang-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MaLiang/MaLiang-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MaLiang/MaLiang.modulemap";
+				PRODUCT_MODULE_NAME = MaLiang;
+				PRODUCT_NAME = MaLiang;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		51F826376C99A7D1C5F7EFF3116CA773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F8675692CC5D4B870E1217CF104AF8F /* Pods-Practice_MaLiangCustomBrush.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Practice_MaLiangCustomBrush/Pods-Practice_MaLiangCustomBrush-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Practice_MaLiangCustomBrush/Pods-Practice_MaLiangCustomBrush.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		71243899B61152433AAE34EE86456EE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		75D70EEEA0A456E14F7338A7F342964E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		78DB73253305EAFF58383772F3929DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 765F00D34D84F227AEBE40842F14B531 /* Pods-Practice_MaLiangCustomBrush.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Practice_MaLiangCustomBrush/Pods-Practice_MaLiangCustomBrush-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Practice_MaLiangCustomBrush/Pods-Practice_MaLiangCustomBrush.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BCD51A6C78849458D57C806BCC2CB8A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4AE1567D3953AD29688A3F18C4C02C1 /* MaLiang.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MaLiang/MaLiang-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MaLiang/MaLiang-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MaLiang/MaLiang.modulemap";
+				PRODUCT_MODULE_NAME = MaLiang;
+				PRODUCT_NAME = MaLiang;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75D70EEEA0A456E14F7338A7F342964E /* Debug */,
+				71243899B61152433AAE34EE86456EE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF504CE61F3A9C4AE48FA877D51E66FB /* Build configuration list for PBXNativeTarget "MaLiang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCD51A6C78849458D57C806BCC2CB8A4 /* Debug */,
+				3DF80FFE67222084B7DCD07C0BC6EE98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C883FB4F3C2656FD78204F958FA1F00A /* Build configuration list for PBXNativeTarget "Pods-Practice_MaLiangCustomBrush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51F826376C99A7D1C5F7EFF3116CA773 /* Debug */,
+				78DB73253305EAFF58383772F3929DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
