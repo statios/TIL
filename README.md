@@ -24,6 +24,8 @@
 
 [Sign in with APPLE](TIL%20372b327c14914c98a5c546cebcc3a5b4/Sign%20in%20with%20APPLE%20ae5acc48c1774d508e7377d2b0fa1dc8.md)
 
+[Codable](TIL%20372b327c14914c98a5c546cebcc3a5b4/Codable%208bc4455a752f47989f0596e3a4219b1f.md)
+
 ### UIKit
 
 [setNeedsLayout()](TIL%20372b327c14914c98a5c546cebcc3a5b4/setNeedsLayout()%20854ef16f194d425e9ba93c237e39a4d4.md)
