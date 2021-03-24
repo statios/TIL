@@ -74,6 +74,8 @@
 
 ### Architecture
 
+[RIBs](TIL%20372b327c14914c98a5c546cebcc3a5b4/RIBs%2066c137394b904ed49c92360d94c33986.md)
+
 [SwiftUI App Architecture](TIL%20372b327c14914c98a5c546cebcc3a5b4/SwiftUI%20App%20Architecture%205d2444a69ffa4b0fa2a4fb4660739e05.md)
 
 [Clean Swift iOS Architecture](TIL%20372b327c14914c98a5c546cebcc3a5b4/Clean%20Swift%20iOS%20Architecture%20efcd6bde224e4ea1bf98f18b7b51f163.md)
