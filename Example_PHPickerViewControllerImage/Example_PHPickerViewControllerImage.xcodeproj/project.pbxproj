@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F92C6345262052F8006324DF /* PHPIckerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C6344262052F8006324DF /* PHPIckerService.swift */; };
+		F92C634B26205361006324DF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F92C634A26205361006324DF /* RxCocoa */; };
+		F92C634D26205361006324DF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F92C634C26205361006324DF /* RxSwift */; };
+		F92C634F26205361006324DF /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F92C634E26205361006324DF /* RxRelay */; };
 		F9513EFB261FE235000B72E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9513EFA261FE235000B72E7 /* AppDelegate.swift */; };
 		F9513EFD261FE235000B72E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9513EFC261FE235000B72E7 /* SceneDelegate.swift */; };
 		F9513EFF261FE235000B72E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9513EFE261FE235000B72E7 /* ViewController.swift */; };
@@ -35,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F92C6344262052F8006324DF /* PHPIckerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPIckerService.swift; sourceTree = "<group>"; };
 		F9513EF7261FE235000B72E7 /* Example_PHPickerViewControllerImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example_PHPickerViewControllerImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9513EFA261FE235000B72E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9513EFC261FE235000B72E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F92C634F26205361006324DF /* RxRelay in Frameworks */,
+				F92C634D26205361006324DF /* RxSwift in Frameworks */,
+				F92C634B26205361006324DF /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +110,7 @@
 				F9513EFA261FE235000B72E7 /* AppDelegate.swift */,
 				F9513EFC261FE235000B72E7 /* SceneDelegate.swift */,
 				F9513EFE261FE235000B72E7 /* ViewController.swift */,
+				F92C6344262052F8006324DF /* PHPIckerService.swift */,
 				F9513F00261FE235000B72E7 /* Main.storyboard */,
 				F9513F03261FE235000B72E7 /* Assets.xcassets */,
 				F9513F05261FE235000B72E7 /* LaunchScreen.storyboard */,
@@ -144,6 +153,11 @@
 			dependencies = (
 			);
 			name = Example_PHPickerViewControllerImage;
+			packageProductDependencies = (
+				F92C634A26205361006324DF /* RxCocoa */,
+				F92C634C26205361006324DF /* RxSwift */,
+				F92C634E26205361006324DF /* RxRelay */,
+			);
 			productName = Example_PHPickerViewControllerImage;
 			productReference = F9513EF7261FE235000B72E7 /* Example_PHPickerViewControllerImage.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = F9513EEE261FE235000B72E7;
+			packageReferences = (
+				F92C634926205361006324DF /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = F9513EF8261FE235000B72E7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +278,7 @@
 				F9513EFF261FE235000B72E7 /* ViewController.swift in Sources */,
 				F9513EFB261FE235000B72E7 /* AppDelegate.swift in Sources */,
 				F9513EFD261FE235000B72E7 /* SceneDelegate.swift in Sources */,
+				F92C6345262052F8006324DF /* PHPIckerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +611,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F92C634926205361006324DF /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F92C634A26205361006324DF /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F92C634926205361006324DF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		F92C634C26205361006324DF /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F92C634926205361006324DF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		F92C634E26205361006324DF /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F92C634926205361006324DF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F9513EEF261FE235000B72E7 /* Project object */;
 }
